@@ -9,3 +9,9 @@
     height: 20px;
     background-color: gainsboro;
 }
+#jug {
+    width: 250px;
+    height: 380px;
+    background-color: gainsboro;
+    border-radius: 0 0 80px 80px;
+}
