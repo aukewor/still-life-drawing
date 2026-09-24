@@ -1,17 +1,208 @@
-#orange-book {
-    width: 180px;
-    height: 250px;
-    background-color: rgb(240, 88, 12);
+#canvas {
+    position: relative;
+  margin: calc((100vh - 600px) / 2) auto;
+  width: 800px;
+  height: 600px;
+  background-color: tan;
+}
+#tabletop {
+    position: absolute;
+    bottom: 0;
+    background-color: PaleGoldenRod;
+    width: 100%;
+    height: 200px;
+}
+#book {
+  position: relative;
+  top: 330px;
+  left: 345px;
+  width: 110px;
+  height: 140px;
+  background-color: rgb(240, 88, 12);
+  transform: skew(0, 3deg);
 }
 
 #book-top {
-    width: 180px;
-    height: 20px;
-    background-color: gainsboro;
+  position: relative;
+  top: -10px;
+  left: 4px;
+  width: 110px;
+  height: 10px;
+  background-color: gainsboro;
+  transform: skew(-40deg, 0);
 }
 #jug {
-    width: 250px;
-    height: 380px;
-    background-color: gainsboro;
-    border-radius: 0 0 80px 80px;
+  position: relative;
+  top: 100px;
+  left: 180px;
+  width: 200px;
+  height: 270px;
+  z-index: 1;
+}
+#jug-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 270px;
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 0 0 80px 80px;
+}
+#jug-spout {
+  position: relative;
+  top: -50px;
+  left: -10px;
+  width: 80px;
+  height: 50px;
+  transform: skew(20deg);
+  background: rgba(220, 220, 220, 0.5);
+}
+#jug-handle {
+  box-sizing: border-box;
+  position: relative;
+  top: -15px;
+  left: 200px;
+  width: 80px;
+  height: 180px;
+  border-top: 30px solid rgba(220, 220, 220, 0.5);
+  border-right: 30px solid rgba(220, 220, 220, 0.5);
+  border-bottom: 30px solid rgba(220, 220, 220, 0.5);
+  border-radius: 0 20px 70px 0;
+}
+#flower {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 450px;
+  transform: rotate(-30deg);
+  z-index: -1;
+}
+#stem {
+  position: relative;
+  left: 45px;
+  width: 10px;
+  height: 450px;
+  background-color: green;
+}
+.petal {
+  position: absolute;
+  top: 0;
+  width: 45px;
+  height: 100px;
+  border-radius: 50%;
+  transform-origin: center top;
+}
+#petal-a {
+  top: 0px;
+  left: 30px;
+  transform: rotate(40deg);
+  background-color: pink;
+}
+#petal-b {
+  top: -5px;
+  left: 10px;
+  box-shadow: 20px 10px 0 0 pink;
+  transform: rotate(-15deg);
+}
+#petal-c {
+  top: -5px;
+  left: 15px;
+  box-shadow: 20px 10px 0 0 rosybrown;
+  transform: rotate(-25deg);
+  z-index: -1;
+}
+#petal-d {
+  top: 0px;
+  left: 30px;
+  transform: rotate(20deg);
+  background-color: rosybrown;
+  z-index: -1;
+}
+.stamen {
+  position: absolute;
+  top: -15px;
+  left: 50px;
+  width: 5px;
+  height: 15px;
+  background-color: yellow;
+  border-radius: 50%;
+  transform-origin: center bottom;
+}
+#stamen-a {
+  transform: rotate(-30deg);
+}
+#stamen-c {
+  transform: rotate(30deg);
+}
+#lamp {
+  position: relative;
+  top: -140px;
+  left: 420px;
+  width: 200px;
+  height: 210px;
+}
+#lamp-top {
+  width: 200px;
+  height: 110px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 70px 70px 20px 20px;
+}
+#lamp-bottom {
+  margin: 0 auto;
+  width: 130px;
+  height: 100px;
+  background-color: rgba(236, 236, 236, 0.9);
+  border-radius: 0 0 30px 30px;
+}
+#timer {
+  position: relative;
+  top: -220px;
+  left: 400px;
+  width: 140px;
+  height: 140px;
+  perspective: 400px;
+  z-index: 2;
+}
+#timer-side {
+  position: absolute;
+  top: 7.5px;
+  left: -20px;
+  height: 125px;
+  width: 100px;
+  background-color: DarkSeaGreen;
+  border-radius: 20px 0 0 20px;
+  transform: rotate3d(0, 1, 0, -55deg);
+}
+#timer-front {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  height: 140px;
+  width: 100px;
+  background-color: whitesmoke;
+  border: 10px rgb(114, 150, 114) solid;
+  border-radius: 20px;
+  transform: rotate3d(0.3, 1, 0, 20deg);
+}
+#timer-knob {
+  position: relative;
+  top: 50px;
+  left: 25px;
+}
+#timer-knob-side {
+  width: 20px;
+  height: 20px;
+  background-color: darkseagreen;
+  border-radius: 10px 0 0 10px;
+  transform: rotate3d(0.3, 1, 0, 20deg) skewY(2deg);
+}
+#timer-knob-front {
+  position: relative;
+  top: -19.5px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(114, 150, 114);
+  border-radius: 50%;
+  transform: rotate3d(0.3, 1, 0, 20deg) skewY(2deg);
 }
